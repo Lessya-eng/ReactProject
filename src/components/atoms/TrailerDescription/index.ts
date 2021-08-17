@@ -1,0 +1,1 @@
+export { TrailerDescription } from './TrailerDescription'

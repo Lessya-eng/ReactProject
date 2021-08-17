@@ -1,0 +1,17 @@
+.btn-login {
+    border: none;
+    background-color: none;
+    background: url(../../../Image/vector.svg) center no-repeat;
+    width: 8px;
+    height: 5px;
+}
+.right-header {
+    display: flex;
+    align-items: center;
+}
+.right-header span {
+    margin-right: 11px;
+}
+.right-header img {
+    margin-right: 9px;
+}

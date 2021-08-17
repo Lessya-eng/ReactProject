@@ -1,0 +1,23 @@
+.film-info {
+    font-family: Alata;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #979797;
+    margin: 0 0 20px 0;
+    overflow: hidden;
+}
+.film-info dt {
+    margin: 0;
+    padding: 8px 0;
+    width: 150px;
+    float: left;
+    clear: both;
+    color: #808d9a;
+}
+.film-info dd {
+    margin: 0 0 0 150px;
+    padding: 8px 0;
+    color: #3a236a;
+}

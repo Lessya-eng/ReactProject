@@ -1,0 +1,1 @@
+export { FilmTitle } from './FilmTitle'

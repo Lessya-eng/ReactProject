@@ -1,0 +1,17 @@
+.folded-film-card {
+    max-width: 341px;
+    height: 473px;
+    background: #fdfdff;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    border-radius: 13px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 32px 30px 24px;
+    margin-left: 0;
+}
+.folded-card-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 341px);
+    gap: 25px;
+}

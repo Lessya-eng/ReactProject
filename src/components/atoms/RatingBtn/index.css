@@ -1,0 +1,18 @@
+.rating-btn button {
+    width: 266px;
+    height: 68px;
+    background: #7f7fd5;
+    border: none;
+    border-radius: 13px;
+    cursor: pointer;
+    color: #ffffff;
+    font-size: 24px;
+    line-height: 33px;
+    font-family: Alata;
+    font-style: normal;
+    font-weight: normal;
+}
+.rating-btn {
+    display: flex;
+    justify-content: center;
+}

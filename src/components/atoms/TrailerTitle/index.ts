@@ -1,0 +1,1 @@
+export { TrailerTitle } from './TrailerTitle'

@@ -1,0 +1,1 @@
+export { FoldedTitle } from './FoldedTitle'

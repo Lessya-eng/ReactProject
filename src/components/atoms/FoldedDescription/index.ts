@@ -1,0 +1,1 @@
+export { FoldedDescription } from './FoldedDescription'

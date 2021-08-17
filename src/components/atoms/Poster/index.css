@@ -1,0 +1,7 @@
+.poster {
+    margin-bottom: 40px;
+    width: 100%;
+}
+.poster img {
+    max-width: 224px;
+}

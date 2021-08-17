@@ -1,0 +1,7 @@
+.btn-filter {
+    border: none;
+    background-color: none;
+    background: url(../../../Image/filter.svg);
+    width: 25.6px;
+    height: 32px;
+}

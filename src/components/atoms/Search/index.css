@@ -1,0 +1,13 @@
+.input::placeholder {
+    background: url(../../../Image/search.svg) no-repeat;
+    background-position: 16px 0;
+    text-indent: 34px;
+}
+.input {
+    width: 150px;
+    height: 32px;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    border-radius: 8px;
+    margin-right: 17px;
+}

@@ -1,0 +1,12 @@
+.trailer-card-wrapper {
+    margin-left: 0;
+    margin-top: 44px;
+    margin-bottom: 53px;
+    max-width: 798px;
+    min-height: 917px;
+    background: #fdfdff;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    border-radius: 13px;
+    padding: 30px;
+}

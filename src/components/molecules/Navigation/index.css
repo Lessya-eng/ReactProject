@@ -1,0 +1,17 @@
+.app-nav,
+.nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+}
+.app-nav {
+    position: relative;
+}
+.nav {
+    position: fixed;
+    justify-content: center;
+}
+.nav img {
+    margin-bottom: 40px;
+}

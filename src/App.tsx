@@ -1,24 +1,38 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { Header } from './components/molecules/Header';
+import { Navigation } from './components/molecules/Navigation';
+import { Movies } from './mock'
+import { MainCard } from './components/molecules/MainCard';
+import { FoldedCard } from './components/molecules/FoldedCard';
+import { FoldedCardTitle } from './components/molecules/FoldedCardTitle';
+import { Title } from './components/atoms/Title';
+import { TrailerCard } from './components/molecules/TrailerCard';
+import { RatingCard } from './components/molecules/RatingCard';
+
+
 
 function App() {
+  const arrayChoose = Movies[1];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app">
+      <nav className="app-nav">
+        <Navigation />
+      </nav>
+      <main className="app-wrapper">
+        <Header />
+        <MainCard />
+        <div className="trailer-rating">
+          <TrailerCard />
+          <RatingCard />
+        </div>
+        <div className="folded-card">
+          <div className="next-movie">
+            <Title title={"Next movie"} />
+          </div>
+          <FoldedCard />
+        </div>
+      </main>
     </div>
   );
 }

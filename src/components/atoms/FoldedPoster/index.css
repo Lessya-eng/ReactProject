@@ -1,0 +1,11 @@
+.folded-poster {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+    margin-bottom: 25px;
+    width: 100%;
+}
+.folded-poster img {
+    width: 131px;
+    height: 199px;
+}

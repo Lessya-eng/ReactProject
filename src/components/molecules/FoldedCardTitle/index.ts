@@ -1,0 +1,1 @@
+export { FoldedCardTitle } from "./FoldedCardTitle";

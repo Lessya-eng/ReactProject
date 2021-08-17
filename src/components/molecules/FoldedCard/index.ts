@@ -1,0 +1,1 @@
+export { FoldedCard } from "./FoldedCard";
