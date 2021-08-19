@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import { Header } from './components/molecules/Header';
 import { Navigation } from './components/molecules/Navigation';
-import { Movies } from './mock'
+import { movie } from './mock'
 import { MainCard } from './components/molecules/MainCard';
 import { FoldedCard } from './components/molecules/FoldedCard';
 import { FoldedCardTitle } from './components/molecules/FoldedCardTitle';
@@ -13,7 +13,7 @@ import { RatingCard } from './components/molecules/RatingCard';
 
 
 function App() {
-  const arrayChoose = Movies[1];
+  const selectedFilm = movie[1];
   return (
     <div className="app">
       <nav className="app-nav">
@@ -21,9 +21,9 @@ function App() {
       </nav>
       <main className="app-wrapper">
         <Header />
-        <MainCard />
+        <MainCard {...selectedFilm} />
         <div className="trailer-rating">
-          <TrailerCard />
+          <TrailerCard {...selectedFilm} />
           <RatingCard />
         </div>
         <div className="folded-card">

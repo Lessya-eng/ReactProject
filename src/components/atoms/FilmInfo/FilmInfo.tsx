@@ -1,20 +1,9 @@
 import * as React from "react";
 import { memo } from "react";
+import { IMovie } from "../../../types";
 import "./index.css";
 
-interface IFilmInfo {
-    year: number;
-    released: string;
-    runtime: string;
-    boxOffice: string;
-    genre: string[];
-    country: string;
-    production: string;
-    writer: string;
-    director: string;
-    actors: string[];
-}
-export const FilmInfo = memo(({ year, released, runtime, boxOffice, genre, country, production, writer, director, actors }: IFilmInfo) => {
+export const FilmInfo = memo(({ year, released, runtime, boxOffice, genre, country, production, writer, director, actors }: IMovie) => {
     return (
         <dl className="film-info">
             <dt>Year</dt>

@@ -1,4 +1,4 @@
-export const Movies = [
+export const movie = [
     {
         id: 1,
         title: "Black Widow",
@@ -31,7 +31,6 @@ export const Movies = [
         plot: "Harry, Ron, and Hermione search for Voldemort's remaining Horcruxes in their effort to destroy the Dark Lord as the final battle rages on at Hogwarts.",
         country: "United Kingdom, United States",
         poster: "https://m.media-amazon.com/images/M/MV5BMGVmMWNiMDktYjQ0Mi00MWIxLTk0N2UtN2ZlYTdkN2IzNDNlXkEyXkFqcGdeQXVyODE5NzE3OTE@._V1_SX300.jpg",
-
         imdbRating: 8.1,
         imdbVotes: 790377,
         type: "movie",
@@ -72,6 +71,7 @@ export const Movies = [
         poster: "https://m.media-amazon.com/images/M/MV5BNzU3NDg4NTAyNV5BMl5BanBnXkFtZTcwOTg2ODg1Mg@@._V1_SX300.jpg",
         imdbRating: 7.6,
         imdbVotes: 492245,
+        type: "movie",
         boxOffice: "$302,305,431",
         production: "Heyday Films, Warner Bros.",
     },
@@ -90,13 +90,14 @@ export const Movies = [
         poster: "https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg",
         imdbRating: 7.6,
         imdbVotes: 684604,
+        type: "movie",
         boxOffice: "$318,087,620",
         production: "1492 Pictures, Heyday Films, Warner Brothers",
     }
 
 ];
 
-export const Trailer = {
+export const trailer = {
     trailer: "https://www.youtube.com/embed/5NYt1qirBWg",
     description: "Harry Potter and the Deathly Hallows -- Part 2, is the final adventure in the Harry Potter film series. The much-anticipated motion picture event is the second of two full-length parts. In the epic finale, the battle between the good and evil forces of the wizarding world escalates into an all-out war.  The stakes have never been higher and no one is safe.  But it is Harry Potter who may be called upon to make the ultimate sacrifice as he draws closer to the climactic showdown with Lord Voldemort. It all ends here.",
 }
