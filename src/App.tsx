@@ -9,8 +9,7 @@ import { FoldedCardTitle } from './components/molecules/FoldedCardTitle';
 import { Title } from './components/atoms/Title';
 import { TrailerCard } from './components/molecules/TrailerCard';
 import { RatingCard } from './components/molecules/RatingCard';
-
-
+import { SortCard } from './components/molecules/SortCard';
 
 function App() {
   const selectedFilm = movie[1];
@@ -31,6 +30,12 @@ function App() {
             <Title title={"Next movie"} />
           </div>
           <FoldedCard />
+        </div>
+        <div>
+          <Title title={"Movie"} />
+          <div>
+            <SortCard />
+          </div>
         </div>
       </main>
     </div>

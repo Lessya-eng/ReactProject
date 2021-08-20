@@ -1,0 +1,64 @@
+.filter-by-inputs-wrapper {
+    font-family: Alata;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    color: #7f7fd5;
+    margin-bottom: 180px;
+}
+.filter-by-inputs-wrapper h6 {
+    font-size: 18px;
+    line-height: 25px;
+    color: #979797;
+    height: 37px;
+    margin-top: 12px;
+}
+.filter-by-inputs-wrapper p {
+    font-size: 16px;
+    line-height: 22px;
+    height: 37px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.filter-by-inputs-main-block {
+    display: flex;
+}
+.filter-by-inputs-year-block {
+    display: flex;
+}
+.filter-by-inputs-rating-block {
+    display: flex;
+}
+.filter-by-inputs-first-block {
+    margin-right: 54px;
+}
+.filter-by-inputs-wrapper input {
+    background: #fdfdff;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 32px;
+}
+.filter-by-inputs-first-block select {
+    background: #fdfdff;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 32px;
+    width: 150px;
+}
+.filter-by-inputs-first-block input {
+    width: 150px;
+}
+.filter-by-inputs-year-block input {
+    width: 83px;
+}
+.filter-by-inputs-rating-block input {
+    width: 83px;
+}
+.filter-by-inputs-genres-block input {
+    min-width: 271px;
+}
