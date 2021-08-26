@@ -5,16 +5,19 @@ import { TrailerDescription } from "../../atoms/TrailerDescription";
 import { TrailerTitle } from "../../atoms/TrailerTitle";
 import { TrailerVideo } from "../../atoms/TrailerVideo";
 import "./index.css";
-import { IMovie } from "../../../types";
+import { IMovie, ITrailer } from "../../../types";
 
+interface ITrailerCard {
+    movie: IMovie
+    trailer: ITrailer
+}
 
-export const TrailerCard = memo((movie: IMovie) => {
-    const trailerVideo = trailer;
+export const TrailerCard = memo(({ movie, trailer }: ITrailerCard) => {
     return (
         <div className="trailer-card-wrapper">
-            <TrailerTitle title={movie.title} />
-            <TrailerVideo trailer={trailerVideo.trailer} />
-            <TrailerDescription description={trailerVideo.description} />
+            <TrailerTitle {...movie} />
+            <TrailerVideo {...trailer} />
+            <TrailerDescription {...trailer} />
         </div>
     )
 });

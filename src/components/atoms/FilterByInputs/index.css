@@ -62,3 +62,23 @@
 .filter-by-inputs-genres-block input {
     min-width: 271px;
 }
+.input-by-genres {
+    background: #fdfdff;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    border-radius: 8px;
+    display: flex;
+    justify-content: flex-end;
+    min-width: 271px;
+    min-height: 32px;
+}
+.input-by-genres button {
+    border: none;
+    background: none;
+    font-family: "Alata";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7f7fd5;
+}

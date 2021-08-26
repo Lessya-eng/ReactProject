@@ -1,7 +1,6 @@
 import * as React from "react";
 import { memo } from "react";
 import "./index.css";
-import { movie } from "../../../mock";
 import { Poster } from "../../atoms/Poster";
 import { FilmTitle } from "../../atoms/FilmTitle";
 import { Rating } from "../../atoms/Rating";
