@@ -21,7 +21,11 @@ export const Navigation = memo(() => {
             <a><img src={play} /></a>
             <a><img src={diagram} /></a>
             <a><img src={setting} /></a>
-            {/* <img src={darktheme} className="darktheme" /> */}
+            <div className="page-them">
+                <div className="dark-them">
+                    <img src={darktheme} />
+                </div>
+            </div>
         </div>
     )
 })

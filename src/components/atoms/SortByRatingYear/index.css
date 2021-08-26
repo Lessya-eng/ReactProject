@@ -1,0 +1,31 @@
+.sort-by-rating-year {
+    font-family: Alata;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 33px;
+    color: #7f7fd5;
+}
+.sort-by-rating-year h4 {
+    margin-bottom: 28px;
+}
+.sort-by-rating-year button {
+    background: #7f7fd5;
+    border: 1px solid #7f7fd5;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 84px;
+    height: 40px;
+    margin-right: 6px;
+    font-family: Alata;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #ffffff;
+    margin-bottom: 24px;
+}
+.sort-by-rating-year button:nth-child(odd) {
+    background: #ebebeb;
+    border: 1px solid #ebebeb;
+}

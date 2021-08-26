@@ -1,20 +1,23 @@
 import * as React from "react";
 import { memo } from "react";
-import { Movies, Trailer } from "../../../mock";
+import { movie, trailer } from "../../../mock";
 import { TrailerDescription } from "../../atoms/TrailerDescription";
 import { TrailerTitle } from "../../atoms/TrailerTitle";
 import { TrailerVideo } from "../../atoms/TrailerVideo";
 import "./index.css";
+import { IMovie, ITrailer } from "../../../types";
 
+interface ITrailerCard {
+    movie: IMovie
+    trailer: ITrailer
+}
 
-export const TrailerCard = memo(() => {
-    const trailerMovie = Movies[1];
-    const trailerVideo = Trailer;
+export const TrailerCard = memo(({ movie, trailer }: ITrailerCard) => {
     return (
         <div className="trailer-card-wrapper">
-            <TrailerTitle title={trailerMovie.title} />
-            <TrailerVideo trailer={trailerVideo.trailer} />
-            <TrailerDescription description={trailerVideo.description} />
+            <TrailerTitle {...movie} />
+            <TrailerVideo {...trailer} />
+            <TrailerDescription {...trailer} />
         </div>
     )
 });
