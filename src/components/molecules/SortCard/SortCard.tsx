@@ -9,7 +9,7 @@ import { FilterByInputs } from "../../atoms/FilterByInputs";
 
 export const SortCard = memo(() => {
     return (
-        <div className="sort-card-wrapper">
+        <div className={"sort-card-wrapper"}>
             <SortByRatingYear />
             <FilterByInputs />
             <SortCardBtn />

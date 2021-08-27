@@ -11,6 +11,7 @@ import { TrailerCard } from './components/molecules/TrailerCard';
 import { RatingCard } from './components/molecules/RatingCard';
 import { SortCard } from './components/molecules/SortCard';
 import { useState } from "react";
+import { Filter } from "./components/atoms/Filter"
 
 
 function App() {
@@ -32,6 +33,15 @@ function App() {
   const onClick = () => {
     console.log('onClick')
   };
+
+
+  const [isShowFilter, setIsShowFilter] = useState(false);
+
+  const clickFilterState = () => {
+    setIsShowFilter(!isShowFilter);
+  };
+
+
   return (
     <div className="app">
       <nav className="app-nav">
@@ -41,7 +51,13 @@ function App() {
         <Header
           searchValue={searchValue}
           onChangeHandler={onChangeHandler}
-          onClick={onClick} />
+          onClick={onClick}
+          clickFilterState={clickFilterState} />
+        <div>
+          {isShowFilter ? (
+            <SortCard />
+          ) : null}
+        </div>
         <MainCard {...selectedFilm} />
         <div className="trailer-rating">
           <TrailerCard movie={selectedFilm} trailer={selectedTrailer} />
@@ -55,9 +71,6 @@ function App() {
         </div>
         <div>
           <Title title={"Movie"} />
-          <div>
-            <SortCard />
-          </div>
         </div>
       </main>
     </div>
