@@ -2,9 +2,13 @@ import * as React from "react";
 import { memo } from "react";
 import "./index.css";
 
-export const Filter = memo(() => {
+interface IFilter {
+    clickFilterState: () => void;
+}
+
+export const Filter = memo(({ clickFilterState }: IFilter) => {
     return (
-        <button className="btn-filter">
-        </button>
+        <button className={"btn-filter"} onClick={clickFilterState} >
+        </button >
     )
 });
