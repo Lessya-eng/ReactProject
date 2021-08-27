@@ -35,10 +35,10 @@ function App() {
   };
 
 
-  const [onClickFilterState, setonClickFilterState] = useState(false);
+  const [isShowFilter, setIsShowFilter] = useState(false);
 
   const clickFilterState = () => {
-    setonClickFilterState(!onClickFilterState);
+    setIsShowFilter(!isShowFilter);
   };
 
 
@@ -54,7 +54,7 @@ function App() {
           onClick={onClick}
           clickFilterState={clickFilterState} />
         <div>
-          {onClickFilterState ? (
+          {isShowFilter ? (
             <SortCard />
           ) : null}
         </div>
