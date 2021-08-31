@@ -7,7 +7,7 @@ import { FoldedTitle } from "../../atoms/FoldedTitle";
 import { FoldedYear } from "../../atoms/FoldedYear";
 import { FoldedDescription } from "../../atoms/FoldedDescription";
 interface IFoldedCard {
-    movie: IMovie[]
+    movie: IMovie[];
 }
 
 export const FoldedCard = memo(({ movie }: IFoldedCard) => {
