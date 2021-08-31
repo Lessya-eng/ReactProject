@@ -1,0 +1,17 @@
+.button-by-filter {
+    background: #7f7fd5;
+    border: none;
+    box-sizing: border-box;
+    border-radius: 5px;
+    width: 84px;
+    height: 40px;
+    margin-right: 6px;
+    font-family: "Alata";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 17px;
+    color: #ffffff;
+    margin-top: 28px;
+    margin-bottom: 24px;
+}
