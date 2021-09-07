@@ -1,5 +1,5 @@
 .filter-by-inputs-wrapper {
-    font-family: Alata;
+    font-family: "Alata";
     font-style: normal;
     font-weight: normal;
     font-size: 24px;
@@ -8,11 +8,6 @@
     margin-bottom: 180px;
 }
 .filter-by-inputs-wrapper h6 {
-    font-size: 18px;
-    line-height: 25px;
-    color: #979797;
-    height: 37px;
-    margin-top: 12px;
 }
 .filter-by-inputs-wrapper p {
     font-size: 16px;
