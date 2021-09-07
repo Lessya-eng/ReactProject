@@ -12,25 +12,38 @@ import { RatingCard } from './components/molecules/RatingCard';
 import { SortCard } from './components/organism/SortCard';
 import { useState } from "react";
 import { ButtonShowFilm } from './components/atoms/ButtonShowFilm';
+import { useEffect } from "react";
 
 
 function App() {
   //Поисковик
-  const selectedFilm = movie[1];
+  /* const selectedFilm = movie[1]; */
   const selectedTrailer = trailer;
-  /*  const countries = массивуникальных ингредиентов, прокинуть в фильтр пэйдж сантрис = кантрис через пропсы , по массиву пройти map , onChance  и через target value*/
 
   const [filteredFilm, setFilteredFilms] = useState(movie.slice(0, 1));
   const [searchValue, setSearchValue] = useState('');
-  const onChangeHandler = (text: string) => {
-    console.log({ text });
-    setSearchValue(text);
-    if (text.length > 2) {
+
+  useEffect(() => {
+    if (searchValue.length > 2) {
       const newMovie = movie.filter(({ title }) => title.toLocaleLowerCase().trim().includes(searchValue.toLocaleLowerCase().trim()));
       setFilteredFilms(newMovie);
       return;
     };
-    setFilteredFilms(movie);
+    if (searchValue.length) {
+      setFilteredFilms(movie);
+    }
+  }, [searchValue, setSearchValue]);
+
+  const onChangeHandler = (text: string) => {
+    console.log({ text });
+    setSearchValue(text);
+    //в useEffect
+    /* if (text.length > 2) {
+        const newMovie = movie.filter(({ title }) => title.toLocaleLowerCase().trim().includes(searchValue.toLocaleLowerCase().trim()));
+        setFilteredFilms(newMovie);
+        return;
+      };
+      setFilteredFilms(movie); */
   };
   const onClick = () => {
     console.log('onClick')
@@ -73,16 +86,77 @@ function App() {
 
   //Пагинация с кнопкой
   const onClickNextFilm = () => {
-    const fieldFilm = sortSettings.reduce((acc, { isActive, field }) => {
-      return isActive ? field : acc;
-    }, "");
     setFilteredFilms(
       [...movie]
-        .sort((a: any, b: any) => a[fieldFilm] - b[fieldFilm])
         .slice(0, filteredFilm.length + 1)
     );
   };
   console.log("clicked")
+
+  //Фильтр по странам
+
+  //Раскрываем карточку по клику
+  const [selectedFilm, setSelectedFilm] = useState(movie[0]);
+
+
+  const onClickFilm = (id: number) => {
+    /* console.log({ id }); */
+    const newMovie = movie.find(({ id: filmId }) => id === filmId)
+    /*   const newMovie = movie.find(({ movie }) => id === movie.id) */
+    if (newMovie) {
+      setSelectedFilm(newMovie);
+    }
+  };
+
+  //Добавить / удалить, используем useState, useEffect, localStorage
+  const [bookmarksId, setBookmarksId] = useState<number[]>([]); //определили тип для useState
+  console.log({ bookmarksId });
+
+
+  const addBookmark = (id: number) => {
+    console.log("addBookmark");
+    const hasId = bookmarksId.find((currentId) => currentId === id);
+    if (hasId) {
+      return;
+    }
+    const newBookmarksId = [...bookmarksId, id];
+    setBookmarksId(newBookmarksId);
+    localStorage.setItem("bookmarks", JSON.stringify(newBookmarksId))
+  };
+
+  useEffect(() => {
+    const savedBookmarks = localStorage.getItem("bookmarks");
+    if (savedBookmarks) {
+      setBookmarksId(JSON.parse(savedBookmarks))
+    };
+    const savedViewedFilms = localStorage.getItem("viewedFilm")
+    if (savedViewedFilms) {
+      setViewedFilm(JSON.parse(savedViewedFilms))
+    }
+    return () => {
+
+    };
+  }, [])
+
+  const removeBookmark = (id: number) => {
+    console.log("removeBookmark");
+    const filteredBookmarks = bookmarksId.filter((currentId) => currentId !== id);
+    setBookmarksId(filteredBookmarks);
+    localStorage.setItem("bookmarks", JSON.stringify(filteredBookmarks))
+  };
+
+  //Метка просмотрено/непосмотрено
+  const [viewedFilm, setViewedFilm] = useState<number[]>([]);
+  const [isViewedChecked, setIsViewedChecked] = useState(false);
+  console.log({ viewedFilm });
+  const onChangeSwitcher = (id: number, checked: boolean) => {
+    setIsViewedChecked(!isViewedChecked);
+    const newViewedFilm = checked ? viewedFilm.filter((currentId) => currentId !== id) : [...viewedFilm, id];
+
+    setViewedFilm(newViewedFilm);
+    localStorage.setItem("viewedFilm", JSON.stringify(newViewedFilm));
+  }
+
   return (
     <div className="app">
       <nav className="app-nav">
@@ -96,7 +170,11 @@ function App() {
           clickFilter={clickFilter} />
         <div>
           {isShowFilter ? (
-            < SortCard sortSettings={sortSettings} onClick={handlerSorting} />
+            < SortCard
+              sortSettings={sortSettings}
+              onClick={handlerSorting}
+              searchValue={searchValue}
+              onChangeHandler={onChangeHandler} />
           ) : null}
         </div>
         <div className="folded-card">
@@ -107,9 +185,20 @@ function App() {
                 isActive={true}
                 onClickNextFilm={onClickNextFilm} />)}
           </div>
-          {movie?.length ? <FoldedCard movie={filteredFilm} /> : (<p>No movie</p>)}
+          {movie?.length ? <FoldedCard movie={filteredFilm}
+            onClickFilm={onClickFilm}
+            addBookmark={addBookmark}
+            removeBookmark={removeBookmark}
+            bookmarksId={bookmarksId}
+            viewedFilm={viewedFilm}
+            text={"Просмотрено"}
+            onChange={onChangeSwitcher}
+            checked={isViewedChecked}
+          /> : (<p>No movie</p>)}
+
         </div>
-        {/*         <MainCard {...selectedFilm} />
+        <MainCard {...selectedFilm} />
+        {/*     
         <div className="trailer-rating">
           <TrailerCard movie={selectedFilm} trailer={selectedTrailer} />
           <RatingCard />
