@@ -31,3 +31,6 @@
     display: flex;
     justify-content: space-between;
 }
+.folded-card-links {
+    text-decoration: none;
+}

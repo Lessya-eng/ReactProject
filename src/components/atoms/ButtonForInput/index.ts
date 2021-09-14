@@ -1,0 +1,1 @@
+export { ButtonForInput } from './ButtonForInput'

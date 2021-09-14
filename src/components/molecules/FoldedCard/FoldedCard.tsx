@@ -7,6 +7,7 @@ import { FoldedTitle } from "../../atoms/FoldedTitle";
 import { FoldedYear } from "../../atoms/FoldedYear";
 import { FoldedDescription } from "../../atoms/FoldedDescription";
 import { Switch } from "../../atoms/Switch";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 interface IFoldedCard {
     movie: IMovie[];
     bookmarksId: number[];
@@ -24,12 +25,14 @@ export const FoldedCard = memo(({ viewedFilm, movie, onClickFilm, addBookmark, r
         <div className="folded-card-wrapper">
             {movie?.map((movie) => (
                 <div key={movie.id}>
-                    <div className="folded-film-card" onClick={() => { onClickFilm(movie.id) }}>
-                        <FoldedPoster poster={movie.poster} />
-                        <FoldedTitle title={movie.title} />
-                        <FoldedYear year={movie.year} />
-                        <FoldedDescription plot={movie.plot} />
-                    </div>
+                    <Link className="folded-card-links" to={"/film/" + movie.id}>
+                        <div className="folded-film-card" onClick={() => { onClickFilm(movie.id) }}>
+                            <FoldedPoster poster={movie.poster} />
+                            <FoldedTitle title={movie.title} />
+                            <FoldedYear year={movie.year} />
+                            <FoldedDescription plot={movie.plot} />
+                        </div>
+                    </Link>
                     <div className="folded-film-card-switch">
                         <div>
                             <Switch text={text} checked={viewedFilm.includes(movie.id)} onChange={() => onChange(movie.id, checked)} id={movie.id} />
