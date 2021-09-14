@@ -3,12 +3,12 @@ import { memo } from "react";
 import "./index.css";
 
 interface IFilter {
-    clickFilterState: () => void;
+    clickFilter: () => void;
 }
 
-export const Filter = memo(({ clickFilterState }: IFilter) => {
+export const Filter = memo(({ clickFilter }: IFilter) => {
     return (
-        <button className={"btn-filter"} onClick={clickFilterState} >
+        <button className={"btn-filter"} onClick={clickFilter} >
         </button >
     )
 });

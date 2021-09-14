@@ -134,7 +134,8 @@ body {
   width: 98px;
   background-color: white;
 }
-.app-wrapper {
+.app-wrapper,
+.login-wrapper {
   background-color: #c4c4c4;
   min-height: 100vh;
   width: 100%;
@@ -143,6 +144,7 @@ body {
   padding-top: 43px;
   padding-left: 50px;
   padding-right: 59px;
+  padding-bottom: 35px;
 }
 
 .app-link {
@@ -150,4 +152,26 @@ body {
 }
 .next-movie {
   margin-bottom: 44px;
+}
+.form {
+  background: #fdfdff;
+  border: 1px solid #ebebeb;
+  box-sizing: border-box;
+  border-radius: 13px;
+  width: 564px;
+  height: 546px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.login-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form-wrapper {
+  display: flex;
+  margin-top: 95px;
+  justify-content: center;
 }

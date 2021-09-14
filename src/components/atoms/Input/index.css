@@ -1,0 +1,19 @@
+.input-for-login {
+    background: #fdfdff;
+    border: 1px solid #ebebeb;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 243px;
+    height: 51.84px;
+}
+.title-for-login {
+    font-family: Alata;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    color: #979797;
+    height: 60px;
+    display: flex;
+    align-items: center;
+}

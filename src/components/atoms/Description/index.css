@@ -1,14 +1,13 @@
 .description {
     font: normal normal 20px/1.4 "Alata", sans-serif;
     color: #979797;
-    max-height: 98px;
 }
 .description span {
     font: normal normal 20px/1.4 "Alata", sans-serif;
     color: #979797;
     overflow: hidden;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
     height: 3.9em;
 }

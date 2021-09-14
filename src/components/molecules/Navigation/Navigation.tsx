@@ -9,14 +9,21 @@ import play from "../../../Image/nav/play.svg"
 import diagram from "../../../Image/nav/diagram.svg"
 import setting from "../../../Image/nav/setting.svg"
 import darktheme from "../../../Image/nav/darktheme.svg"
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 
 export const Navigation = memo(() => {
     return (
         <div className="nav">
-            <a><img src={home} /></a>
-            <a><img src={list} /></a>
-            <a><img src={users} /></a>
+            <Link to="/">
+                <img src={home} />
+            </Link>
+            <Link to="/film/:id">
+                <img src={list} />
+            </Link>
+            <Link to="/films">
+                <img src={users} />
+            </Link>
             <a><img src={message} /></a>
             <a><img src={play} /></a>
             <a><img src={diagram} /></a>
@@ -26,6 +33,6 @@ export const Navigation = memo(() => {
                     <img src={darktheme} />
                 </div>
             </div>
-        </div>
+        </div >
     )
 })

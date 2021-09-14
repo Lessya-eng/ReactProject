@@ -1,1 +1,0 @@
-export { SortByRatingYear } from "./SortByRatingYear";
